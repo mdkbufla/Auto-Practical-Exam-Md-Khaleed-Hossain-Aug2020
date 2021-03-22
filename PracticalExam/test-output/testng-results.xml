@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="6854" started-at="2021-03-21T01:11:13 CDT" finished-at="2021-03-21T01:11:20 CDT">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="6854" started-at="2021-03-21T01:11:13 CDT" finished-at="2021-03-21T01:11:20 CDT">
+      <class name="examtestng.AddMonthsTest3">
+        <test-method status="PASS" signature="TestNGTest1()[pri:0, instance:examtestng.AddMonthsTest3@694e1548]" name="TestNGTest1" is-config="true" duration-ms="3338" started-at="2021-03-21T01:11:13 CDT" finished-at="2021-03-21T01:11:16 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestNGTest1 -->
+        <test-method status="PASS" signature="TestCase2()[pri:0, instance:examtestng.AddMonthsTest3@694e1548]" name="TestCase2" duration-ms="326" started-at="2021-03-21T01:11:16 CDT" finished-at="2021-03-21T01:11:17 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase2 -->
+        <test-method status="PASS" signature="TestNGTest1()[pri:0, instance:examtestng.AddMonthsTest3@694e1548]" name="TestNGTest1" is-config="true" duration-ms="2614" started-at="2021-03-21T01:11:17 CDT" finished-at="2021-03-21T01:11:19 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestNGTest1 -->
+        <test-method status="PASS" signature="TestCase3()[pri:0, instance:examtestng.AddMonthsTest3@694e1548]" name="TestCase3" duration-ms="535" started-at="2021-03-21T01:11:19 CDT" finished-at="2021-03-21T01:11:20 CDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase3 -->
+      </class> <!-- examtestng.AddMonthsTest3 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

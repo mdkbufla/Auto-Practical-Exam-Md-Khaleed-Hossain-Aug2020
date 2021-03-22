@@ -1,0 +1,63 @@
+package examtestng;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class AddDuplicateCatagoryTest2 {
+
+	WebDriver driver;
+	WebElement element;
+
+	@BeforeMethod
+	public void TestNGTest1() {
+
+		System.setProperty("webdriver.chrome.driver", "driver\\chromedriver.exe");
+		driver = new ChromeDriver();
+
+		driver.get("https://techfios.com/test/101/");
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
+	}
+
+	@Test
+	public void TestCase2()
+
+	{
+		driver.findElement(By.cssSelector("[name='categorydata']")).sendKeys("HelloWorld");
+
+		driver.findElement(By.cssSelector("input[value='Add category']")).click();
+
+		driver.findElement(By.cssSelector("[name='categorydata']")).sendKeys("HelloWorld");
+		driver.findElement(By.cssSelector("input[value='Add category']")).click();
+
+		//String message = driver.findElement(By.cssSelector("body[style*='HelloWorld']")).getText();
+		String message = driver.findElement(By.xpath("//*[@id=\"todos-content\"]/form/ul/li[6]")).getText();
+		Assert.assertEquals(" 5HelloWorld (None)", message);
+
+		System.out.println("The catagory is already exists.");
+
+	}
+
+	 @AfterMethod
+	public void tearDown() {
+		driver.close();
+		driver.quit();
+
+	}
+
+}
